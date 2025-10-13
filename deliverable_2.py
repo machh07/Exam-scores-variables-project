@@ -73,3 +73,19 @@ plt.title('Average Exam Scores by Study Hour Ranges')
 plt.xlabel('Study Hours')
 plt.ylabel('Average Exam Score')
 plt.show()
+
+
+#Create pie chart
+plt.pie(avg_scores,
+        labels=labels,
+        autopct='%1.1f%%',    
+        startangle=140,         
+        colors=['orange', 'blue', 'cyan', 'yellow', 'green'])
+
+plt.title('Average Exam Scores by Study Hour Ranges')
+plt.show()
+
+
+#Your should comment your code with a quick explanation about each plot !!!
+
+
