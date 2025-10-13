@@ -51,3 +51,25 @@ plt.xlabel("Exam scores")
 plt.ylabel("Frequency")
 plt.title("Histogram of Exam Scores")
 plt.show()
+
+#Create a bar graph
+avg_scores = []
+
+ranges = [(2, 4), (4, 6), (6, 8), (8, 10), (10, 12)]
+labels = ['2-4', '4-6', '6-8', '8-10', '10-12']
+
+
+for i in ranges:
+    start, end = i
+    scores_in_range = [score for hour, score in zip(filtered_study_hours, filtered_exam_scores) if start < hour <= end]
+    
+    if scores_in_range:
+        avg_scores.append(np.mean(scores_in_range))
+    else:
+        avg_scores.append(0)
+
+plt.bar(labels, avg_scores, color='orange')
+plt.title('Average Exam Scores by Study Hour Ranges')
+plt.xlabel('Study Hours')
+plt.ylabel('Average Exam Score')
+plt.show()
