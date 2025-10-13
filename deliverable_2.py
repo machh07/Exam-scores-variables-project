@@ -45,3 +45,9 @@ plt.xlabel("Number of hours studied")
 plt.ylabel("Exam scores")
 plt.show()
 
+#Create a histogram
+plt.hist(y, bins=25, color='purple', alpha=0.8)
+plt.xlabel("Exam scores")
+plt.ylabel("Frequency")
+plt.title("Histogram of Exam Scores")
+plt.show()
