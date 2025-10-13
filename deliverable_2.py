@@ -44,3 +44,4 @@ plt.title("Scatter Plot of Exam Scores vs Study Time")
 plt.xlabel("Number of hours studied")
 plt.ylabel("Exam scores")
 plt.show()
+
