@@ -1,14 +1,14 @@
 
 # Importing the data 
 import pandas as pd
-data = pd.read_csv('student_exam_scores.csv')
+scores = pd.read_csv('student_exam_scores.csv')
 
 
 # Turning data from collums into arrays
 import numpy as np
 
-study_hours = np.array(data["hours_studied"])
-exam_scores = np.array(data["exam_score"])
+study_hours = np.array(scores["hours_studied"])
+exam_scores = np.array(scores["exam_score"])
 
 
 # Positions where study hours > 2
@@ -85,7 +85,17 @@ plt.pie(avg_scores,
 plt.title('Average Exam Scores by Study Hour Ranges')
 plt.show()
 
+#Import seaborn
+import seaborn as sns
+sns.set_theme()
 
-#Your should comment your code with a quick explanation about each plot !!!
+#Create plot of any type using grid
+sns.relplot(
+    data=scores, 
+    x="hours_studied",
+    y="exam_score", 
+    kind="line",
+    errorbar="sd")
+#You should comment your code with a quick explanation about each plot !!!
 
 
