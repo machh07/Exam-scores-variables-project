@@ -65,3 +65,11 @@ plt.scatter(x,y)
 plt.show()
 
 
+
+
+#piechart
+
+pie_data = data["previous_scores"].sample(15).value_counts()
+plt.pie(pie_data, labels=pie_data.index)
+
+
