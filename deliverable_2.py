@@ -40,38 +40,38 @@ print("Filtered Exam Scores:", filtered_exam_scores)
 import matplotlib.pyplot as plt
 import numpy as np
 
-#attempted bar plot
-
-bins = [2, 4, 6, 8 ,10 ,12]                    # Attempted a bar plot as a workaround because the original data was complicated,
-                                               # and we were unable to make it work the “correct” way.
-labels = ["2-4", "4-6", "6-8","8-10","10-12"]
+# Attempted a bar plot as a workaround because the original data was complicated,
+# and we were unable to make it work the “correct” way.
 
 x = np.arange(len(filtered_exam_scores))  
 y = filtered_exam_scores                 
-
+#plotting the graph
 plt.bar(x, y, color='pink')            
 plt.xlabel("Hours Studied")    
 plt.ylabel("Exam Scores")
-plt.title("Exam Scores for Students Who Studied > 2 Hours")
-                       
+plt.title("Exam Scores for Students Who Studied > 2 Hours") 
 plt.show()
 
-# plot of any type containing 2 subplots side by side (counts as 1)
+# Plot of any type containing 2 subplots side by side: plotting two scatter plots
 plt.scatter(x,y, color="red", alpha = 0.7)
 plt.title("Scatter Plot of Exam Scores vs Study Time")
 plt.xlabel("Number of hours studied")
 plt.ylabel("Exam scores")
 plt.subplot(1,2,2)
 plt.scatter(x,y)
+# Display the graph
 plt.show()
 
-#piechart
-
+# A pie chart
+# Randomly select 15 samples from the 'previous_scores' column 
+# and count how many times each score appears
 pie_data = data["previous_scores"].sample(15).value_counts()
+# Create a pie chart using the counts and label each slice with the score value
 plt.pie(pie_data, labels=pie_data.index)
+# Display the chart
 plt.show()
 
-# scatterplot grid
+# Scatter plot with grid
 plt.scatter(x,y, color="red", alpha = 0.7)
 plt.title("Scatter Plot of Exam Scores vs Study Time")
 plt.xlabel("Number of hours studied")
