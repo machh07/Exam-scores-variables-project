@@ -71,5 +71,12 @@ plt.show()
 
 pie_data = data["previous_scores"].sample(15).value_counts()
 plt.pie(pie_data, labels=pie_data.index)
-
+plt.show()
+# plot of any type containing 2 subplots side by side (counts as 1)
+plt.scatter(x,y, color="red", alpha = 0.7)
+plt.title("Scatter Plot of Exam Scores vs Study Time")
+plt.xlabel("Number of hours studied")
+plt.ylabel("Exam scores")
+plt.grid(color='gray')
+plt.show()
 
