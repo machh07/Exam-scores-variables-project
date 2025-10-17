@@ -90,12 +90,14 @@ import seaborn as sns
 sns.set_theme()
 
 #Create plot of any type using grid
-sns.relplot(
+lineplot=sns.relplot(
     data=scores, 
     x="hours_studied",
     y="exam_score", 
     kind="line",
     errorbar="sd")
+#Add a title to line plot
+lineplot.fig.suptitle("Exam Score vs Hours Studied")
 #You should comment your code with a quick explanation about each plot !!!
 
 
