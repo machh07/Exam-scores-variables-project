@@ -64,6 +64,7 @@ pie_data = data["previous_scores"].sample(15).value_counts()
 # Create a pie chart using the counts and label each slice with the score value
 plt.pie(pie_data, labels=pie_data.index)
 # Display the chart
+plt.title("Pie Chart of 15 random previous scores")
 plt.show()
 
 # Scatter plot with grid
@@ -112,4 +113,3 @@ plt.xlabel("Hours Studied")
 plt.ylabel("Exam Scores")
 plt.title("Exam Scores vs Study Hours")
 plt.show()
-
