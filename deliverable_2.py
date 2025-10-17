@@ -40,7 +40,7 @@ print("Filtered Exam Scores:", filtered_exam_scores)
 import matplotlib.pyplot as plt
 import numpy as np
 
-
+#attempted bar plot
 
 bins = [2, 4, 6, 8 ,10 ,12] 
 labels = ["2-4", "4-6", "6-8","8-10","10-12"]
@@ -72,7 +72,8 @@ plt.show()
 pie_data = data["previous_scores"].sample(15).value_counts()
 plt.pie(pie_data, labels=pie_data.index)
 plt.show()
-# plot of any type containing 2 subplots side by side (counts as 1)
+
+# scatterplot grid
 plt.scatter(x,y, color="red", alpha = 0.7)
 plt.title("Scatter Plot of Exam Scores vs Study Time")
 plt.xlabel("Number of hours studied")
