@@ -64,9 +64,6 @@ plt.subplot(1,2,2)
 plt.scatter(x,y)
 plt.show()
 
-
-
-
 #piechart
 
 pie_data = data["previous_scores"].sample(15).value_counts()
@@ -81,3 +78,16 @@ plt.ylabel("Exam scores")
 plt.grid(color='gray')
 plt.show()
 
+#Create a scatter plot
+plt.scatter(x,y, color="red", alpha = 0.7)
+plt.title("Scatter Plot of Exam Scores vs Study Time")
+plt.xlabel("Number of hours studied")
+plt.ylabel("Exam scores")
+plt.show()
+
+#Create a histogram
+plt.hist(y, bins=25, color='purple', alpha=0.8)
+plt.xlabel("Exam scores")
+plt.ylabel("Frequency")
+plt.title("Histogram of Exam Scores")
+plt.show()
