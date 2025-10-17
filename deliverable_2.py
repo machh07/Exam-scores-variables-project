@@ -2,17 +2,11 @@
 import pandas as pd
 import numpy as np
 
-
-
 data = pd.read_csv('student_exam_scores.csv')
 
-
 # Turning data from collums into arrays
-
-
 study_hours = np.array(data["hours_studied"])
 exam_scores = np.array(data["exam_score"])
-
 
 # Positions where study hours > 2
 positions = []
@@ -44,8 +38,9 @@ import numpy as np
 # and we were unable to make it work the “correct” way.
 
 x = np.arange(len(filtered_exam_scores))  
-y = filtered_exam_scores                 
-#plotting the graph
+y = filtered_exam_scores   
+              
+#plotting the graph using the bar function and adding labels and a title. 
 plt.bar(x, y, color='pink')            
 plt.xlabel("Hours Studied")    
 plt.ylabel("Exam Scores")
@@ -95,7 +90,7 @@ plt.show()
 
 # Create a plot with 2 arrays, 2 line types and 2 colors
 
-# Sort data by study hours to put in order
+# Sort data by study hours to put in order, using argsort numpy function
 sorting_positions = np.argsort(study_hours)
 study_hours_sorted = study_hours[sorting_positions]
 exam_scores_sorted = exam_scores[sorting_positions]
@@ -112,6 +107,7 @@ plt.plot(study_hours_sorted[above_2],
          exam_scores_sorted[above_2], 
          color='green', linestyle='-')
 
+#Adding labels and titles to the graph, and displaying
 plt.xlabel("Hours Studied")
 plt.ylabel("Exam Scores")
 plt.title("Exam Scores vs Study Hours")
