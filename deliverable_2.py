@@ -92,3 +92,28 @@ plt.xlabel("Exam scores")
 plt.ylabel("Frequency")
 plt.title("Histogram of Exam Scores")
 plt.show()
+
+# Create a plot with 2 arrays, 2 line types and 2 colors
+
+# Sort data by study hours to put in order
+sorting_positions = np.argsort(study_hours)
+study_hours_sorted = study_hours[sorting_positions]
+exam_scores_sorted = exam_scores[sorting_positions]
+
+# Splitting hours into two parts
+below_2 = study_hours_sorted <= 2
+above_2 = study_hours_sorted > 2
+
+# Plotting each section in different colors and line types
+plt.plot(study_hours_sorted[below_2], 
+         exam_scores_sorted[below_2], 
+         color='red', linestyle=':')
+plt.plot(study_hours_sorted[above_2], 
+         exam_scores_sorted[above_2], 
+         color='green', linestyle='-')
+
+plt.xlabel("Hours Studied")
+plt.ylabel("Exam Scores")
+plt.title("Exam Scores vs Study Hours")
+plt.show()
+
