@@ -42,7 +42,8 @@ import numpy as np
 
 #attempted bar plot
 
-bins = [2, 4, 6, 8 ,10 ,12] 
+bins = [2, 4, 6, 8 ,10 ,12]                    # Attempted a bar plot as a workaround because the original data was complicated,
+                                               # and we were unable to make it work the “correct” way.
 labels = ["2-4", "4-6", "6-8","8-10","10-12"]
 
 x = np.arange(len(filtered_exam_scores))  
